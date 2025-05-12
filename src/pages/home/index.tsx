@@ -1,0 +1,109 @@
+import Card from "../../components/Card";
+import ShopNow from "../../components/ShopNow";
+
+const Home = () => {
+  return (
+    <div className="flex flex-col items-center justify-center gap-5">
+
+
+      {/* Hero section */}
+      <div className="w-screen h-screen flex flex-col justify-start items-center pt-14 gap-5 ">
+        <div className="relative w-full flex justify-center items-center py-20 ">
+
+          {/* Cards */}
+          <div className="relative w-[800px] h-[400px]">
+            {/* Card 1 - far left */}
+
+            <div
+              className="absolute top-[-0%] left-52  z-10 rounded-xl shadow-xl animate-fan-left"
+            >
+              <Card
+                image="/images/CARD3.png"
+                title="Thawne"
+                description="Baby Magma 5% Comes with 18 Free Gold Coins"
+              />
+            </div>
+
+            {/* Card 2 - left */}
+            <div
+              className="absolute top-0 left-[25%]  z-20 rounded-xl shadow-xl animate-fan-left delay-200"
+            >
+              <Card
+                image="/images/CARD2.png"
+                title="Thawne"
+                description="Baby Magma 5% Comes with 18 Free Gold Coins"
+              />
+            </div>
+
+            {/* Card 3 - center */}
+            <div
+              className="absolute top-0 left-[25%] rotate-0 z-30 rounded-xl shadow-xl animate-fan-center delay-400"
+            >
+
+              <Card
+                image="/images/CARD 1.png"
+                title="Thawne"
+                description="Baby Magma 5% Comes with 18 Free Gold Coins"
+              />
+            </div>
+
+            {/* Card 4 - right */}
+            <div
+              className="absolute top-0 left-50  z-20 rounded-xl shadow-xl animate-fan-right delay-600"
+            >
+
+              <Card
+                image="/images/CARD2.png"
+                title="Thawne"
+                description="Baby Magma 5% Comes with 18 Free Gold Coins"
+              />
+            </div>
+
+            {/* Card 5 - far right */}
+            <div
+              className="absolute top-0 left-50  z-10 rounded-xl shadow-xl animate-fan-right delay-800"
+            >
+
+              <Card
+                image="/images/CARD3.png"
+                title="Thawne"
+                description="Baby Magma 5% Comes with 18 Free Gold Coins"
+              />
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="flex mt-32 justify-center items-center flex-col gap-8">
+          <span className="Bold-heading flex justify-center items-center w-4xl m-0">BROWSE FOR LIMITED EDITION DIGITAL CARDS</span>
+          <span className="btnTheme m-0">Explore More</span>
+        </div>
+
+
+      </div>
+
+
+
+      {/* About Us */}
+      <div className=" flex justify-center items-center mt-24 relative">
+        <img src="/images/Rectangle.png " alt="" />
+        <div className="flex flex-col justify-center items-center absolute">
+          <h3 className="font-extrabold text-7xl">ABOUT US</h3>
+          <p className="w-[900px] tracking-wide">
+            Welcome to Real Money – Your #1 Trusted Site for Digital Card Collecting! Dive into the world of digital cards with our comprehensive website
+            portal! Connect with fellow enthusiasts in our vibrant social media community, where you can share news, tips, and fun experiences related to
+            your digital card hobby. Why Join Us? - Stay Updated: Get the latest news in the digital card space. - Engage with the Community: Join
+            discussions, share your collections, and connect with other collectors. - Exclusive Bonuses: Sign up today to receive special offers and bonuses!
+            Don’t miss out on the fun – sign up now and start your digital card adventure with us!
+          </p>
+        </div>
+      </div>
+
+      {/* Shop Now */}
+      <ShopNow />
+    </div>
+  );
+};
+
+export default Home;
