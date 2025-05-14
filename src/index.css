@@ -101,7 +101,7 @@ button:focus-visible {
 .btnTheme {
   position: relative;
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 0.70rem 2rem;
   color: white;
   font-weight: 600;
   background: linear-gradient(45deg, #FF1D21, #B3090B);
@@ -174,7 +174,7 @@ button:focus-visible {
       #7F352E 100.86%,
       #7B302D 103.94%,
       #9F420E 123.95%);
-    padding: 5px;
+  padding: 5px;
 }
 
 
@@ -248,9 +248,6 @@ button:focus-visible {
   }
 }
 
-
-
-
 .animate-fan-left {
   animation: fanLeft 5s ease-in-out infinite;
 }
@@ -277,6 +274,30 @@ button:focus-visible {
 
 .animate-fan-right.delay-800 {
   animation-delay: 0.5s;
+}
+
+/* 🟠 Mobile Override: Disable animations & layout as horizontal scroll */
+@media (max-width: 768px) {
+
+  .animate-fan-left,
+  .animate-fan-center,
+  .animate-fan-right {
+    animation: none !important;
+    position: static !important;
+    rotate: 0deg !important;
+  }
+
+  .fan-container {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .fan-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
 }
 
 
@@ -311,26 +332,45 @@ button:focus-visible {
 
 
 
-
-
-
-
-
 .Bold-heading {
   font-weight: 1000;
-  /* font-extrabold */
   font-size: 4rem;
+  /* Default for large screens */
   line-height: 90%;
-  /* text-7xl (72px) */
-  /* items-center */
   color: white;
   text-shadow:
-    /* text-outline-red */
     -1px -1px 0 #ff1d1d,
     1px -1px 0 #ff1d1d,
     -1px 1px 0 #ff1d1d,
     1px 1px 0 #ff1d1d,
     0px 0px 2px #ff1d1d;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .Bold-heading {
+    font-size: 3rem;
+    text-align: center;
+
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .Bold-heading {
+    font-size: 2.0rem;
+    text-align: center;
+
+  }
+}
+
+/* Extra small screens (small phones) */
+@media (max-width: 480px) {
+  .Bold-heading {
+    font-size: 1.7rem;
+    text-align: center;
+
+  }
 }
 
 .card-heading {
@@ -348,6 +388,14 @@ button:focus-visible {
     -1px 1px 0 #ff1d1d,
     1px 1px 0 #ff1d1d,
     0px 0px 2px #ff1d1d;
+}
+
+@media (max-width: 640px) {
+  .card-heading {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: start;
+  }
 }
 
 .coin-heading {

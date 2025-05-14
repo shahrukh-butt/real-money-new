@@ -20,7 +20,7 @@ export default function Wallet() {
         </Modal>
       )}
 
-      <div className='flex  items-center justify-center gap-5'>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-5'>
         <CaseForWalletOptions
           image='/images/gold-coin-big.png'
           title='SUBMIT GOLD COINS'
@@ -55,7 +55,7 @@ const Modal = ({ isOpen, onClose }: any) => {
 
               <img
                 onClick={onClose}
-                src="/images/CROSS.png" alt="close" className="absolute top-7 right-[-18px]"  width={50} height={50} />
+                src="/images/CROSS.png" alt="close" className="absolute top-7 right-[-18px]" width={50} height={50} />
               {/* content */}
               <div className="mt-16 mb-5 ">
                 <p className="text-3xl font-extrabold mt-5 text-center">SUBMIT REQUEST TO
@@ -73,7 +73,7 @@ const Modal = ({ isOpen, onClose }: any) => {
                 <textarea
                   className="p-4 bg-[#31313161] rounded-xl h-[150px]  w-full text-white resize-none"
                   placeholder="Enter Notes Here!"
-                  
+
                 ></textarea>
                 <span className="btnTheme text-center">SUBMIT GOLD COINS</span>
               </div>

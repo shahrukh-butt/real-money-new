@@ -3,7 +3,7 @@ import ShopNow from "../../components/ShopNow";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-start md:justify-center gap-8 md:gap-10">
 
 
       {/* Hero section */}
@@ -11,11 +11,11 @@ const Home = () => {
         <div className="relative w-full flex justify-center items-center py-20 ">
 
           {/* Cards */}
-          <div className="relative w-[800px] h-[400px]">
+          <div className="relative w-[800px] md:h-[400px] fan-container px-24 md:px-0">
             {/* Card 1 - far left */}
 
             <div
-              className="absolute top-[-0%] left-52  z-10 rounded-xl shadow-xl animate-fan-left"
+              className="absolute top-[-0%] left-52 z-10 rounded-xl shadow-xl animate-fan-left  fan-item fan-item"
             >
               <Card
                 image="/images/CARD3.png"
@@ -26,7 +26,7 @@ const Home = () => {
 
             {/* Card 2 - left */}
             <div
-              className="absolute top-0 left-[25%]  z-20 rounded-xl shadow-xl animate-fan-left delay-200"
+              className="absolute top-0 left-[25%]  z-20 rounded-xl shadow-xl animate-fan-left delay-200 fan-item"
             >
               <Card
                 image="/images/CARD2.png"
@@ -37,7 +37,7 @@ const Home = () => {
 
             {/* Card 3 - center */}
             <div
-              className="absolute top-0 left-[25%] rotate-0 z-30 rounded-xl shadow-xl animate-fan-center delay-400"
+              className="absolute top-0 left-[25%] rotate-0 z-30 rounded-xl shadow-xl animate-fan-center delay-400 fan-item"
             >
 
               <Card
@@ -49,7 +49,7 @@ const Home = () => {
 
             {/* Card 4 - right */}
             <div
-              className="absolute top-0 left-50  z-20 rounded-xl shadow-xl animate-fan-right delay-600"
+              className="absolute top-0 left-50  z-20 rounded-xl shadow-xl animate-fan-right delay-600 fan-item"
             >
 
               <Card
@@ -61,7 +61,7 @@ const Home = () => {
 
             {/* Card 5 - far right */}
             <div
-              className="absolute top-0 left-50  z-10 rounded-xl shadow-xl animate-fan-right delay-800"
+              className="absolute top-0 left-50  z-10 rounded-xl shadow-xl animate-fan-right delay-800 fan-item "
             >
 
               <Card
@@ -75,8 +75,8 @@ const Home = () => {
         </div>
 
 
-        <div className="flex mt-32 justify-center items-center flex-col gap-8">
-          <span className="Bold-heading flex justify-center items-center w-4xl m-0">BROWSE FOR LIMITED EDITION DIGITAL CARDS</span>
+        <div className="flex md:mt-32 justify-center items-center flex-col gap-8 px-3 md:px-0">
+          <span className="Bold-heading flex justify-center items-center md:w-4xl m-0 text-center">BROWSE FOR LIMITED EDITION DIGITAL CARDS</span>
           <span className="btnTheme m-0">Explore More</span>
         </div>
 
@@ -86,11 +86,11 @@ const Home = () => {
 
 
       {/* About Us */}
-      <div className=" flex justify-center items-center mt-24 relative">
-        <img src="/images/Rectangle.png " alt="" />
-        <div className="flex flex-col justify-center items-center absolute">
-          <h3 className="font-extrabold text-7xl">ABOUT US</h3>
-          <p className="w-[900px] tracking-wide">
+      <div className=" flex justify-center items-center mt-10 md:mt-24 relative ">
+        <img src="/images/Rectangle.png " className="h-[570px] lg:h-auto p-3" alt="" />
+        <div className="flex flex-col justify-center items-center absolute px-6 md:px-0">
+          <h3 className="font-extrabold  text-3xl md:text-7xl">ABOUT US</h3>
+          <p className="md:w-[900px]  tracking-wide">
             Welcome to Real Money – Your #1 Trusted Site for Digital Card Collecting! Dive into the world of digital cards with our comprehensive website
             portal! Connect with fellow enthusiasts in our vibrant social media community, where you can share news, tips, and fun experiences related to
             your digital card hobby. Why Join Us? - Stay Updated: Get the latest news in the digital card space. - Engage with the Community: Join

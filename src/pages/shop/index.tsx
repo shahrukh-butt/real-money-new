@@ -69,15 +69,15 @@ export default function Shop() {
 
 
     return (
-        <div className='flex flex-col items-center justify-center gap-5 relative'>
+        <div className='flex flex-col items-center justify-center gap-5 relative px-4 md:mx-32'>
 
             <p className='Bold-heading uppercase'>Shop Cards</p>
 
 
-            <div className='w-full mr-96 flex justify-end items-end gap-32'>
-                <div className='rounded-box w-[850px]'>
+            <div className='w-full  flex flex-col lg:flex-row justify-center items-center lg:justify-end lg:items-end gap-5 lg:gap-32 '>
+                <div className='rounded-box w-full md:w-[700px] lg:w-[850px]'>
 
-                    <div className='rounded-box-inner p-6'>
+                    <div className='rounded-box-inner p-4 md:p-6'>
                         <div className='bg-[#31313161] p-3 rounded-full'>
                             <div className='flex items-center gap-4'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -93,29 +93,24 @@ export default function Shop() {
 
                 </div>
 
+                <div className='flex flex-col  gap-0 items-center '>
+                    <p className='text-white'>Sort By Price</p>
+                    <div className='rounded-box p-4 rounded-full w-[200px]'>
+                        <div className="relative w-full">
+                            <select
+                                className="rounded-full py-2 px-4 w-full text-white bg-black outline-none appearance-none"
+                            >
+                                <option value="">Select Option</option>
+                                <option value="option1">Option One</option>
+                                <option value="option2">Option Two</option>
+                                <option value="option3">Option Three</option>
+                            </select>
 
-                <div className=''>
-
-                    <div className='flex flex-col  gap-0 items-center '>
-
-                        <p className='text-white'>Sort By Price</p>
-                        <div className='rounded-box p-4 rounded-full w-[200px]'>
-                            <div className="relative w-full">
-                                <select
-                                    className="rounded-full py-2 px-4 w-full text-white bg-black outline-none appearance-none"
-                                >
-                                    <option value="">Select Option</option>
-                                    <option value="option1">Option One</option>
-                                    <option value="option2">Option Two</option>
-                                    <option value="option3">Option Three</option>
-                                </select>
-
-                                <img
-                                    src="/images/chevron.png"
-                                    alt="dropdown icon"
-                                    className="pointer-events-none absolute right-5 top-1/2 transform -translate-y-1/2 w-4 h-4"
-                                />
-                            </div>
+                            <img
+                                src="/images/chevron.png"
+                                alt="dropdown icon"
+                                className="pointer-events-none absolute right-5 top-1/2 transform -translate-y-1/2 w-4 h-4"
+                            />
                         </div>
                     </div>
                 </div>
@@ -136,21 +131,21 @@ export default function Shop() {
             </div>
 
 
-            <div className='flex items-center justify-center gap-[1000px]'>
+            <div className='flex flex-col md:flex-row items-center justify-between w-full  '>
 
                 <div>showing 1-10 of 100</div>
-                <div className="flex justify-center items-center gap-2 mt-4">
-                    <button className="px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700 disabled:opacity-50" disabled>
+                <div className="flex justify-center items-center gap-[2px] md:gap-2 mt-4">
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700 disabled:opacity-50" disabled>
                         Prev
                     </button>
 
-                    <button className="px-3 py-1 rounded-md bg-gray-900 text-white border border-gray-600">1</button>
-                    <button className="px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">2</button>
-                    <button className="px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">3</button>
-                    <span className="px-2 text-gray-400">...</span>
-                    <button className="px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">10</button>
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-900 text-white border border-gray-600">1</button>
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">2</button>
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">3</button>
+                    <span className="px-1 md:px-2 text-gray-400">...</span>
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">10</button>
 
-                    <button className="px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">
+                    <button className="px-1 md:px-3 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700">
                         Next
                     </button>
                 </div>

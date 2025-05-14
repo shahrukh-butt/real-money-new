@@ -11,7 +11,7 @@ export default function Card({ title, description, image }: { title: string, des
             onClick={() => navigate('/product-details')}
             className='relative '>
 
-            <div className='box relative'>
+            <div className='box relative overflow-hidden'>
 
                 <img className='p-2' src={image} alt={image} />
 
@@ -24,7 +24,7 @@ export default function Card({ title, description, image }: { title: string, des
 
 
 
-            <div className='w-96 h-32 absolute bottom-1 left-[-30px] flex justify-center items-center gap-0'>
+            <div className='w-96 h-32 absolute bottom-1 left-[-20px] flex justify-center items-center gap-0'>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="140" viewBox="0 0 386 140" fill="none">
                     <path d="M18 140L0 122V34L18 17.5H129L145.5 0H304L326.5 22.5V82.5L386 140H18Z" fill="url(#paint0_linear_2927_795)" />
