@@ -4,7 +4,7 @@ export default function CaseForWalletOptions({ title, image, openModal }: { titl
 
     <div
       onClick={() => openModal && openModal(true)}
-      className='rounded-box relative w-80 h-[251px] flex justify-center items-center cursor-pointer '>
+      className='rounded-box relative w-72  md:w-64 lg:w-80 h-[251px] flex justify-center items-center cursor-pointer '>
 
       <div className="flex rounded-box-inner  flex-col justify-center items-center gap-3 px-8 md:px-6 text-center ">
         <img className='p-2' src={image} alt={image} />

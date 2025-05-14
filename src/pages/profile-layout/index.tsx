@@ -36,7 +36,7 @@ export default function DashboardLayout() {
     ];
 
     return (
-        <div className='flex items-center justify-center gap-10 px-20'>
+        <div className='flex items-center justify-center gap-10 px-4 lg:px-20'>
             {/* Sidebar */}
             <div className='basis-[18%] h-[650px] rounded-box relative flex justify-center items-center cursor-pointer'>
                 <div className="flex flex-col rounded-box-inner gap-3 py-12 ">

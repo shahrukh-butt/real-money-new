@@ -140,9 +140,11 @@ button:focus-visible {
 }
 
 @media (max-width: 640px) {
+
   /* sm: */
   .btnTheme {
-    font-size: 0.6rem;     /* 16px */
+    font-size: 0.6rem;
+    /* 16px */
     padding: 0.75rem 2.25rem;
   }
 }
@@ -421,4 +423,16 @@ button:focus-visible {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+
+.shadowText {
+  color: white;
+  text-shadow:
+    /* text-outline-red */
+    -1px -1px 0 #ff1d1d,
+    1px -1px 0 #ff1d1d,
+    -1px 1px 0 #ff1d1d,
+    1px 1px 0 #ff1d1d,
+    0px 0px 2px #ff1d1d;
 }

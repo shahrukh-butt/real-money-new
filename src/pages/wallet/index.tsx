@@ -10,9 +10,30 @@ export default function Wallet() {
 
 
   return (
-    <div className='flex flex-col items-center justify-center gap-10'>
+    <div className='flex flex-col items-center justify-center gap-7 md:gap-10 mt-5 md:mt-0'>
 
-      <p className='Bold-heading'>WALLET</p>
+      <div className="flex flex-col md:flex-row justify-end items-center w-full md:ml-[-10%] lg:ml-[-50%] gap-2 md:gap-10">
+        
+         <p className='Bold-heading '>WALLET</p>
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mb-12">
+          <div className="roundedBox flex items-center justify-center gap-2 ">
+            <img src="/images/gold-coin-big.png" className="ms-3" width={30} alt="coin" />
+            <div className="flex justify-center items-center text-sm font-semibold px-2">500 gold coins</div>
+          </div>
+
+          <div className="roundedBox flex items-center justify-center gap-2 ">
+            <img src="/images/red-coin-big.png" className="ms-3"  width={30} alt="coin" />
+            <div className="flex justify-center items-center text-sm font-semibold px-2">500 red coins</div>
+          </div>
+          
+        </div>
+       
+      </div>
+
+
+
+
 
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
