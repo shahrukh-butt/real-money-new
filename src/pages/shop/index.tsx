@@ -180,7 +180,7 @@ const Modal = ({ isOpen, onClose }: any) => {
 
             {/* Background container (your existing layout) */}
             <div className="fixed inset-0 z-10 flex items-start justify-center pt-36 px-4 ">
-                <div className="rounded-box-inner modalstyle max-w-md w-full max-h-[53vh] overflow-y-auto relative p-6 ">
+                <div className="rounded-box-inner modalstyle max-w-md w-full max-h-fit overflow-y-auto relative p-6 ">
                     {/* <img
                         onClick={onClose}
                         src="/images/CROSS.png"
@@ -189,7 +189,7 @@ const Modal = ({ isOpen, onClose }: any) => {
                         width={40}
                         height={40}
                     /> */}
-                    <div className='mt-10'>
+                    <div className='mt-10 pb-4'>
                         <p className='text-xl font-extrabold'>TERMS AND CONDITIONS</p>
                         <p className='text-xs font-extralight leading-4'>Thank you for choosing Real Money Dragon . By accessing or using our website and purchasing
                             products or services from us, you agree to the following Terms and Conditions Please read these
