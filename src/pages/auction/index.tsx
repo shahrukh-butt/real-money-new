@@ -1,7 +1,6 @@
 import Card from '../../components/Card'
 
-export default function Shop() {
-
+export default function Auction() {
     const cardsDate = [
         {
             Image: "/images/CARD 1.png",
@@ -69,12 +68,12 @@ export default function Shop() {
 
 
     return (
-        <div className='flex flex-col items-center justify-center gap-5 relative px-4 md:mx-32'>
+        <div className='flex flex-col items-center justify-center gap-5 relative px-4 md:mx-24'>
 
-            <p className='Bold-heading uppercase'>Shop Cards</p>
+            <p className='Bold-heading uppercase'>Live Auction</p>
 
 
-            <div className='w-full  flex flex-col lg:flex-row justify-center items-center lg:justify-end lg:items-end gap-5 lg:gap-32 '>
+            <div className='w-full  flex flex-col lg:flex-row justify-center items-center  gap-5 lg:gap-32 '>
                 <div className='rounded-box w-full md:w-[700px] lg:w-[850px]'>
 
                     <div className='rounded-box-inner p-4 md:p-6'>
@@ -93,39 +92,26 @@ export default function Shop() {
 
                 </div>
 
-                <div className='flex flex-col  gap-0 items-center '>
-                    <p className='text-white'>Sort By Price</p>
-                    <div className='rounded-box p-4 rounded-full w-[200px]'>
-                        <div className="relative w-full">
-                            <select
-                                className="rounded-full py-2 px-4 w-full text-white bg-black outline-none appearance-none"
-                            >
-                                <option value="">Select Option</option>
-                                <option value="option1">Option One</option>
-                                <option value="option2">Option Two</option>
-                                <option value="option3">Option Three</option>
-                            </select>
-
-                            <img
-                                src="/images/chevron.png"
-                                alt="dropdown icon"
-                                className="pointer-events-none absolute right-5 top-1/2 transform -translate-y-1/2 w-4 h-4"
-                            />
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
             <div className='flex  items-center justify-center  flex-wrap gap-10'>
                 {cardsDate.map((card, index) => (
-                    <Card
-                        key={index}
-                        image={card.Image}
-                        title={card.title}
-                        description={card.descriptions}
-                        link={"/product-details"}
-                    />
+                    <div className='flex flex-col gap-5'>
+                        <Card
+                            key={index}
+                            image={card.Image}
+                            title={card.title}
+                            description={card.descriptions}
+                            link={"/auction-details"}
+                        />
+                        <div className="flex flex-col gap-1">
+                            <span className="leading-none break-words">
+                                {"Romulus #1 (1939 Pokémon) CGC -PINUP ON BACK...".slice(0, 40) + "..."}
+                            </span>
+                            <span className="text-2xl font-extrabold leading-none">$ 240.00</span>
+                        </div>
+                    </div>
                 ))
 
                 }

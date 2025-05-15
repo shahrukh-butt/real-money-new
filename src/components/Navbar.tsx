@@ -64,6 +64,16 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <NavLink
+                                    to="/auction"
+                                    className={({ isActive }) =>
+                                        isActive ? "text-yellow-400 border-b-2 border-yellow-400" : ""
+                                    }
+                                >
+                                    Auction
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
                                     to="/community"
                                     className={({ isActive }) =>
                                         isActive ? "text-yellow-400 border-b-2 border-yellow-400" : ""

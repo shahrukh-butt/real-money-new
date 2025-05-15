@@ -18,6 +18,8 @@ import OrderAndHistory from "./pages/order-and-history";
 import ChangePassword from "./pages/change-password";
 import PayeeInfo from "./pages/payee-info";
 import MyCardPurchases from "./pages/my-card-purchases";
+import Auction from "./pages/auction";
+import AuctionDetails from "./pages/auction-details";
 
 const PrivateRoute = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -47,6 +49,8 @@ function AppRoutes() {
               <Route path="/wallet" element={<Wallet />} />
               <Route path="/my-cart" element={<MyCart />} />
               <Route path="/checkout" element={<CheckOut />} />
+              <Route path="/auction" element={<Auction />} />
+              <Route path="/auction-details" element={<AuctionDetails />} />
 
               <Route path="/" element={<DashboardLayout />}>
                 <Route path="/my-profile" element={<MyProfile />} />

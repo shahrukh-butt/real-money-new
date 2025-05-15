@@ -85,7 +85,7 @@ export default function ProductDetails() {
 
 
             <div className='w-full flex justify-center items-center gap-32 px-3 md:px-0'>
-                <div className='rounded-box w-[850px] '>
+                <div className='rounded-box w-full md:w-[850px] '>
 
                     <div className='rounded-box-inner  px-4 py-8 md:p-10  '>
                         <div className='bg-[#0B0B0B] p-4 rounded-full '>
@@ -97,6 +97,7 @@ export default function ProductDetails() {
                                     <Card image="/images/CARD4.png"
                                         title="elio"
                                         description="elio"
+                                        link={"/product-details"}
                                     />
                                 </div>
 
@@ -174,6 +175,7 @@ export default function ProductDetails() {
                                     image={card.Image}
                                     title={card.title}
                                     description={card.descriptions}
+                                    link={"/product-details"}
                                 />
                             </div>
                         </SwiperSlide>

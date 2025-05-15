@@ -21,6 +21,7 @@ const Home = () => {
                 image="/images/CARD3.png"
                 title="Thawne"
                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                link={"/product-details"}
               />
             </div>
 
@@ -32,6 +33,7 @@ const Home = () => {
                 image="/images/CARD2.png"
                 title="Thawne"
                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                link={"/product-details"}
               />
             </div>
 
@@ -44,6 +46,7 @@ const Home = () => {
                 image="/images/CARD 1.png"
                 title="Thawne"
                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                link={"/product-details"}
               />
             </div>
 
@@ -56,6 +59,7 @@ const Home = () => {
                 image="/images/CARD2.png"
                 title="Thawne"
                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                link={"/product-details"}
               />
             </div>
 
@@ -68,6 +72,7 @@ const Home = () => {
                 image="/images/CARD3.png"
                 title="Thawne"
                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                link={"/product-details"}
               />
             </div>
           </div>

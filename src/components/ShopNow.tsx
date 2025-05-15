@@ -25,13 +25,14 @@ export default function ShopNow() {
                                 image="/images/CARD 1.png"
                                 title="Thawne"
                                 description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                                link={"/product-details"}
                             />
                         </div>
 
 
                         <div className="rotate-6 md:rotate-10">
                             <Card
-                                image="/images/CARD2.png" title="Thawne" description="Baby Magma 5% Comes with 18 Free Gold Coins" />
+                                image="/images/CARD2.png" title="Thawne" description="Baby Magma 5% Comes with 18 Free Gold Coins" link={"/product-details"} />
                         </div>
 
 

@@ -36,6 +36,7 @@ export default function MyCardPurchases() {
                                         image="/images/CARD 1.png"
                                         title="Helious"
                                         description="Baby Magma 5% Comes with 18 Free Gold Coins"
+                                        link={"/product-details"}
                                     />
                                 </div>
                             </SwiperSlide>

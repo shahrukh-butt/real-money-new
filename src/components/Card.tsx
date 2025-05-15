@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-export default function Card({ title, description, image }: { title: string, description: string, image: string }) {
+export default function Card({ title, description, image ,link }: { title: string, description: string, image: string ,link : string}) {
 
 
     const navigate = useNavigate();
@@ -8,7 +8,7 @@ export default function Card({ title, description, image }: { title: string, des
 
     return (
         <div
-            onClick={() => navigate('/product-details')}
+            onClick={() => navigate(link)}
             className='relative '>
 
             <div className='box relative overflow-hidden'>
