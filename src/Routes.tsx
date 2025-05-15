@@ -17,6 +17,7 @@ import DashboardLayout from "./pages/profile-layout";
 import OrderAndHistory from "./pages/order-and-history";
 import ChangePassword from "./pages/change-password";
 import PayeeInfo from "./pages/payee-info";
+import MyCardPurchases from "./pages/my-card-purchases";
 
 const PrivateRoute = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -53,6 +54,7 @@ function AppRoutes() {
                 <Route path="/change-password" element={<ChangePassword />} />
                 <Route path="/payee-info" element={<PayeeInfo/>} />
                 <Route path="/order-and-history" element={<OrderAndHistory />} />
+                <Route path="/my-card-purchases" element={<MyCardPurchases />} />
               </Route>
             </Route>
           </Routes>

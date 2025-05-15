@@ -79,19 +79,19 @@ export default function ProductDetails() {
 
 
     return (
-        <div className='flex flex-col items-center justify-center gap-10 relative'>
+        <div className='flex flex-col items-center justify-center gap-10 relative '>
 
-            <p className='Bold-heading uppercase'>Product Details</p>
+            <p className='Bold-heading uppercase mt-5'>Product Details</p>
 
 
-            <div className='w-full  flex justify-center items-center gap-32 '>
+            <div className='w-full flex justify-center items-center gap-32 px-3 md:px-0'>
                 <div className='rounded-box w-[850px] '>
 
-                    <div className='rounded-box-inner  p-10'>
+                    <div className='rounded-box-inner  px-4 py-8 md:p-10  '>
                         <div className='bg-[#0B0B0B] p-4 rounded-full '>
 
 
-                            <div className="flex gap-10 items-center">
+                            <div className="flex flex-col md:flex-row   gap-10 items-center">
 
                                 <div className="w-fit flex-1/2">
                                     <Card image="/images/CARD4.png"
@@ -101,11 +101,15 @@ export default function ProductDetails() {
                                 </div>
 
                                 <div className="flex-1/2 flex flex-col gap-5">
-                                    <span className="font-extrabold text-5xl leading-none">Oberon</span>
-                                    <span className="Bold-heading leading-none">$20.00</span>
+                                   <div className="flex  flex-row md:flex-col justify-between items-center md:items-start gap-5 md:gap-2">
+                                   <span className="font-extrabold text-5xl leading-none">Oberon</span>
+                                   <span className="Bold-heading leading-none mt-2 md:mt-0">$20.00</span>
+                                   </div>
                                     <span className="leading-tight">
                                         Baby Oberon 5% BONUS COMES WITH 18 FREE GOLD COINS + 1 BONUS COINS TOTAL PACKAGE OF FREE GOLD COINS IS 19
                                     </span>
+
+
                                     <div className="flex items-center gap-2">
                                         <button
                                             onClick={decrement}
@@ -145,7 +149,7 @@ export default function ProductDetails() {
             <p className='Bold-heading uppercase '>Similar Products</p>
 
 
-            <div className="w-full px-10">
+            <div className="w-full md:px-10">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={5}
