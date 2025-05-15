@@ -24,7 +24,7 @@ export default function Navbar() {
                         <ul className="flex justify-between uppercase gap-5 cursor-pointer text-sm md:text-sm">
                             <li>
                                 <NavLink
-                                    to="/"
+                                    to="/home"
                                     className={({ isActive }) =>
                                         isActive ? "text-yellow-400 border-b-2 border-yellow-400" : ""
                                     }
@@ -69,7 +69,7 @@ export default function Navbar() {
                                         isActive ? "text-yellow-400 border-b-2 border-yellow-400" : ""
                                     }
                                 >
-                                    Auction
+                                    Auctions
                                 </NavLink>
                             </li>
                             <li>

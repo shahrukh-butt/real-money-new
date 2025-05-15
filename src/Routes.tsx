@@ -20,6 +20,8 @@ import PayeeInfo from "./pages/payee-info";
 import MyCardPurchases from "./pages/my-card-purchases";
 import Auction from "./pages/auction";
 import AuctionDetails from "./pages/auction-details";
+import Signup from "./pages/signup";
+import Login from "./pages/login";
 
 const PrivateRoute = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -41,7 +43,9 @@ function AppRoutes() {
             {/* <Route path="/login" element={<Login />} /> */}
 
             <Route element={<PrivateRoute />}>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Login />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="//product-details" element={<ProductDetails />} />
               <Route path="/giveaway" element={<Giveaway />} />
