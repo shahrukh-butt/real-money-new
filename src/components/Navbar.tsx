@@ -14,14 +14,14 @@ export default function Navbar() {
     const navigate = useNavigate()
     return (
         <>
-            <div className="flex w-screen justify-between items-center px-3 md:px-14 py-6" >
-                <img src="/images/LOGO.png" className={"w-24 md:w-32"} alt="logo" />
+            <div className="flex w-screen justify-between items-center px-3 md:px-12 py-6" >
+                <img src="/images/LOGO.png" className={"w-24 md:w-28"} alt="logo" />
 
                 <div className="flex justify-between items-center gap-14">
 
 
-                    <div className="hidden md:block">
-                        <ul className="flex justify-between uppercase gap-5 cursor-pointer text-sm md:text-sm">
+                    <div className="hidden lg:block">
+                        <ul className="flex justify-between uppercase gap-4  xl:gap-5 cursor-pointer text-sm md:text-sm">
                             <li>
                                 <NavLink
                                     to="/home"
@@ -119,13 +119,13 @@ export default function Navbar() {
 
 
                             <img
-                                className="rounded-full w-12 h-12 hidden md:block"
+                                className="rounded-full w-12 h-12 hidden lg:block"
                                 src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="user" />
                             <div className="flex justify-center items-center gap-4 mt-4">
-                                <p className="hidden md:block">username</p>
+                                <p className="hidden lg:block">username</p>
 
 
-                                <div className="relative hidden md:inline-block text-left">
+                                <div className="relative hidden lg:inline-block text-left">
                                     <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                                         <img
                                             src="/images/chevron.png"
@@ -152,7 +152,7 @@ export default function Navbar() {
                                     )}
                                 </div>
 
-                                <div className="md:hidden mb-3">
+                                <div className="lg:hidden mb-3">
                                     <svg
                                         className="w-7 h-7 text-white cursor-pointer"
                                         xmlns="http://www.w3.org/2000/svg"
