@@ -5,7 +5,7 @@ export default function ShopNow() {
     return (
         <>
             {/* Shop Now */}
-            <div className="flex justify-center items-center flex-col lg:flex-row md:mt-24 gap-24 px-3 md:px-10 ">
+            <div className="flex justify-center items-center flex-col lg:flex-row md:mt-24 gap-24 px-3 md:px-10 lg:px-36 ">
 
                 <div className="flex-1/2 flex flex-col justify-center items-center md:items-start relative gap-7 px-3 md:px-0">
                     <span className="Bold-heading flex justify-center items-center w-full md:w-3xl m-0 ">WANT TO SEE THE FULL LIST OF CARDS</span>
