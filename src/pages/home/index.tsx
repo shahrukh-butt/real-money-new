@@ -91,7 +91,7 @@ const Home = () => {
 
 
       {/* About Us */}
-      <div className="md:w-[80%] px-4  mt-14">
+      <div className="md:w-[80%] px-4  mt-24">
         <div className="modalstyle rounded-box-inner  justify-center items-center mt-10 md:mt-24 relative  overflow-hidden z-50 ">
 
           <img src="/images/bar1.png " className="h-full  absolute left-6 lg:left-24 " alt="" />
