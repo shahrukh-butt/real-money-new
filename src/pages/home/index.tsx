@@ -91,11 +91,16 @@ const Home = () => {
 
 
       {/* About Us */}
-      <div className=" flex justify-center items-center mt-10 md:mt-24 relative ">
-        <img src="/images/Rectangle.png " className="h-[570px] lg:h-auto p-3" alt="" />
-        <div className="flex flex-col justify-center items-center absolute px-6 md:px-0">
-          <h3 className="font-extrabold  text-3xl md:text-7xl">ABOUT US</h3>
-          <p className="md:w-[900px]  tracking-wide">
+      <div className="md:w-[80%] px-4">
+      <div className="modalstyle rounded-box-inner  justify-center items-center mt-10 md:mt-24 relative  overflow-hidden z-50">
+
+        <img src="/images/bar1.png " className="h-full  absolute left-6 md:left-10 " alt="" />
+        <img src="/images/bar1.png " className="h-full absolute right-6 md:right-10 " alt="" />
+
+
+        <div className="flex flex-col justify-center items-center px-6 md:px-0">
+          <h3 className="font-extrabold  text-3xl md:text-7xl pt-10">ABOUT US</h3>
+          <p className="md:w-[80%] p-5 tracking-wide">
             Welcome to Real Money – Your #1 Trusted Site for Digital Card Collecting! Dive into the world of digital cards with our comprehensive website
             portal! Connect with fellow enthusiasts in our vibrant social media community, where you can share news, tips, and fun experiences related to
             your digital card hobby. Why Join Us? - Stay Updated: Get the latest news in the digital card space. - Engage with the Community: Join
@@ -103,6 +108,12 @@ const Home = () => {
             Don’t miss out on the fun – sign up now and start your digital card adventure with us!
           </p>
         </div>
+        </div>
+
+
+
+
+
       </div>
 
       {/* Shop Now */}

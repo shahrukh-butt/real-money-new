@@ -32,7 +32,7 @@ export default function Navbar() {
                                     Home
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink
                                     to="/about"
                                     className={({ isActive }) =>
@@ -41,7 +41,7 @@ export default function Navbar() {
                                 >
                                     About Us
                                 </NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <NavLink
                                     to="/shop"

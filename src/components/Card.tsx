@@ -46,7 +46,7 @@ export default function Card({ title, description, image ,link }: { title: strin
                 </div>
 
 
-                <div className="absolute right-18 top-5">
+                <div className="absolute right-20 top-4">
                     <img src="/images/DRAGON.png" alt="dragon" />
                 </div>
 
