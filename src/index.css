@@ -101,7 +101,7 @@ button:focus-visible {
 .btnTheme {
   position: relative;
   display: inline-block;
-  padding: 0.70rem 2rem;
+  padding: 0.90rem 2rem;
   color: white;
   font-weight: 600;
   background: linear-gradient(45deg, #FF1D21, #B3090B);
