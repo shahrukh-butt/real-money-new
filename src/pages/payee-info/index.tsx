@@ -22,8 +22,8 @@ export default function PayeeInfo() {
 
 
     return (
-        <div className="flex flex-col rounded-box-inner gap-3 py-12 px-16">
-            <p className="text-4xl font-extrabold">Payee Info</p>
+        <div className="flex flex-col rounded-box-inner gap-3 py-12 px-6 md:px-16">
+            <p className="text-2xl md:text-4xl font-extrabold ps-3 md:ps-0">Payee Info</p>
 
             <div className="flex flex-col gap-3">
                 <>
@@ -113,7 +113,7 @@ export default function PayeeInfo() {
                     <div className='mt-10 flex gap-3'>
                         <button
                             // onClick={() => setEditing(true)}
-                            className="btnTheme m-0 w-[200px]"
+                            className="btnTheme m-0 w-full md:w-[200px]"
                         >
                             Edit Information
                         </button>

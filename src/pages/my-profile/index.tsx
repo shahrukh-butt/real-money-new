@@ -41,8 +41,8 @@ export default function MyProfile() {
     };
 
     return (
-        <div className="flex flex-col rounded-box-inner gap-3 py-12 px-16">
-            <p className="text-4xl font-extrabold">MY PROFILE</p>
+        <div className="flex flex-col rounded-box-inner gap-3 py-12 px-6 md:px-16">
+            <p className="text-2xl md:text-4xl font-extrabold">MY PROFILE</p>
 
             <div className="flex flex-col gap-3">
                 <div className='relative'>
@@ -125,15 +125,15 @@ export default function MyProfile() {
                                     />
                                 </div>
                             </div>
-                            <div className='mt-10 flex gap-3'>
+                            <div className='mt-10 flex flex-col md:flex-row gap-3'>
                                 <button
                                     onClick={() => setEditing(true)}
-                                    className="btnTheme m-0 w-[220px]"
+                                    className="btnTheme m-0 md:w-[220px]"
                                 >
                                     UPDATE PROFILE
                                 </button>     <button
                                     onClick={() => setEditing(false)}
-                                    className="btnTheme m-0 w-[170px]"
+                                    className="btnTheme m-0 md:w-[170px]"
                                 >
                                     Cancel
                                 </button>
@@ -141,19 +141,19 @@ export default function MyProfile() {
                         </>
                     ) : (
                         <>
-                            <p className="text-xl flex justify-start gap-20">
+                            <p className="text-lg md:text-xl flex justify-start gap-4  md:gap-20">
                                 <span>First Name:</span>
                                 <span>{formData.firstName}</span>
                             </p>
-                            <p className="text-xl flex justify-start gap-20">
+                            <p className="text-lg md:text-xl flex justify-start gap-4 md:gap-20">
                                 <span>Last Name:</span>
                                 <span>{formData.lastName}</span>
                             </p>
-                            <p className="text-xl flex justify-start gap-20">
+                            <p className="text-lg md:text-xl flex justify-start gap-4 md:gap-20">
                                 <span>Email:</span>
                                 <span>{formData.email}</span>
                             </p>
-                            <p className="text-xl flex justify-start gap-20 ">
+                            <p className="text-lg md:text-xl flex justify-start gap-4 md:gap-20 ">
                                 <span>Phone Number:</span>
                                 <span>{formData.phoneNumber}</span>
                             </p>

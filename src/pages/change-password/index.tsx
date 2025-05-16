@@ -30,8 +30,8 @@ export default function ChangePassword() {
     };
 
     return (
-        <div className="flex flex-col rounded-box-inner py-12 px-16">
-            <p className="text-4xl font-extrabold mb-6">Change Password</p>
+        <div className="flex flex-col rounded-box-inner py-12 px-6 md:px-16">
+            <p className="text-2xl md:text-4xl font-extrabold mb-6">Change Password</p>
 
             <div className="flex flex-col gap-6 max-w-xl w-full">
                 {['oldPassword', 'newPassword', 'confirmPassword'].map((field) => (
@@ -58,7 +58,7 @@ export default function ChangePassword() {
                 ))}
 
                 <div className="mt-6">
-                    <button className="btnTheme w-[230px]">UPDATE PASSWORD</button>
+                    <button className="btnTheme w-full md:w-[230px]">UPDATE PASSWORD</button>
                 </div>
             </div>
         </div>

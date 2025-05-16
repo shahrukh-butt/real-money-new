@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router"
+import SideSheet from "./sideSheet";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isSheetOpen, setIsSheetOpen] = useState(false);
+
 
     const options = [
         {
@@ -14,7 +17,14 @@ export default function Navbar() {
     const navigate = useNavigate()
     return (
         <>
+
+            <SideSheet
+                isOpen={isSheetOpen}
+                setIsOpen={setIsSheetOpen}
+            />
             <div className="flex w-screen justify-between items-center px-3 md:px-12 py-6" >
+
+
                 <img src="/images/LOGO.png" className={"w-24 md:w-28"} alt="logo" />
 
                 <div className="flex justify-between items-center gap-14">
@@ -90,7 +100,7 @@ export default function Navbar() {
                             <div className="relative">
                                 <img
                                     onClick={() => navigate('/wallet')}
-                                    className="mb-7  relative z-50" src="/images/wallet.png" alt="wallet" />
+                                    className="mb-7  relative z-20" src="/images/wallet.png" alt="wallet" />
                                 <img
                                     onClick={() => navigate('/wallet')}
                                     className="w-5 h-5 absolute top-7 left-0 z-10 animate-coin-toss"
@@ -152,7 +162,9 @@ export default function Navbar() {
                                     )}
                                 </div>
 
-                                <div className="lg:hidden mb-3">
+                                <div
+                                    onClick={() => setIsSheetOpen(true)}
+                                    className="lg:hidden mb-3">
                                     <svg
                                         className="w-7 h-7 text-white cursor-pointer"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +189,7 @@ export default function Navbar() {
 
             </div >
 
-            <div className="absolute top-[50%] right-8 z-50 cursor-pointer">
+            <div className="absolute top-[50%] right-2 md:right-8 z-40 cursor-pointer">
                 <img src="/images/chat-icon.png" alt="chat-icon" />
             </div>
         </>

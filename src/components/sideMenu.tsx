@@ -1,12 +1,9 @@
-import { useState } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router';
-import SideMenu from '../../components/sideMenu';
+import { useLocation, useNavigate } from "react-router";
 
-export default function DashboardLayout() {
+export default function SideMenu({ setIsOpen, isOpen }: any) {
     const location = useLocation();
-    const { pathname } = location;
     const navigate = useNavigate()
-    const [isOpen, setIsOpen] = useState(false)
+    const { pathname } = location;
 
     const links = [
         {
@@ -44,68 +41,41 @@ export default function DashboardLayout() {
         },
     ];
 
+
+
     return (
-        <>
-
-
-
-            <div
-                onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden  fixed left-4 z-40">
-                <svg
-                    className="pulseScaleStyle"
-
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <path d="M3 4h18v16H3z" />
-                    <path d="M15 4v16" />
-                    <path d="M7 8h4" />
-                    <path d="M7 12h4" />
-                    <path d="M7 16h4" />
-                </svg>
+        <div
+            className={`fixed top-0 left-0 h-full w-64 bg-black box z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+                } shadow-lg`}
+        >
+            <div className="flex items-center justify-end p-4 ">
+                <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-600">
+                    ✕
+                </button>
             </div>
-            {isOpen && (
-                <SideMenu
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
-                />
-            )}
 
-
-            <div className='flex items-center justify-center gap-10 px-4 lg:px-6 xl:px-20'>
-                {/* Sidebar */}
-
-                <div className='basis-[18%] h-[650px] rounded-box relative lg:flex justify-center items-center cursor-pointer hidden'>
-                    <div className="flex flex-col rounded-box-inner gap-3 py-12 ">
-                        <nav className="flex flex-col justify-center items-center w-full space-y-3 px-2">
-                            {links.map((link) => (
-                                <div
-                                    key={link.to}
-                                    onClick={() => navigate(link.to)}
-                                    className={`flex justify-start items-center gap-2  px-10 py-4 w-full rounded transition-colors
+            <div className="flex flex-col gap-3 py-2 ">
+                <nav className="flex flex-col justify-center items-center w-full space-y-3 ">
+                    {links.map((link) => (
+                        <div
+                            key={link.to}
+                            onClick={() => {
+                                setIsOpen(false);
+                                navigate(link.to);
+                            }}
+                            className={`flex justify-start items-center gap-2  px-10 py-4 w-full rounded transition-colors
                                ${pathname === link.to ? 'bg-red-600 text-white' : 'text-white hover:text-white '}
                            `}
-                                >
-                                    {link.icon}
-                                    {link.label}
-                                </div>
-                            ))}
-                        </nav>
-                    </div>
-                </div>
-
-                {/* Main Content */}
-                <div className='w-full lg:basis-[75%] h-full lg:h-[650px] rounded-box relative flex justify-center items-center mt-16 lg:mt-0'>
-                    <Outlet />
-                </div>
+                        >
+                            {link.icon}
+                            {link.label}
+                        </div>
+                    ))}
+                </nav>
             </div>
-        </>
 
-    );
+
+            
+        </div>
+    )
 }

@@ -60,7 +60,7 @@ function AppRoutes() {
                 <Route path="/my-profile" element={<MyProfile />} />
                 <Route path="/my-orders" element={<MyOrders />} />
                 <Route path="/change-password" element={<ChangePassword />} />
-                <Route path="/payee-info" element={<PayeeInfo/>} />
+                <Route path="/payee-info" element={<PayeeInfo />} />
                 <Route path="/order-and-history" element={<OrderAndHistory />} />
                 <Route path="/my-card-purchases" element={<MyCardPurchases />} />
               </Route>
