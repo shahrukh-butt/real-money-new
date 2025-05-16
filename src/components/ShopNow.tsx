@@ -39,7 +39,7 @@ export default function ShopNow() {
 
                                 <div className='w-96 h-32 absolute bottom-[-10px] sm:bottom-0 left-[-40px]  md:left-[-20px] flex justify-center items-center gap-0 sm:bg-[url("/images/red-svg.png")]  '>
 
-                                    <svg className="sm:hidden absolute left-4 bottom-[-20px]" xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 0 386 140" fill="none">
+                                    <svg className="sm:hidden absolute left-4 bottom-[-23px]" xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 0 386 140" fill="none">
                                         <path d="M18 140L0 122V34L18 17.5H129L145.5 0H304L326.5 22.5V82.5L386 140H18Z" fill="url(#paint0_linear_2927_795)" />
                                         <defs>
                                             <linearGradient id="paint0_linear_2927_795" x1="162.25" y1="0" x2="162.25" y2="140" gradientUnits="userSpaceOnUse">
