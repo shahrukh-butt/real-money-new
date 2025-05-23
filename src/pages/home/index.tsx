@@ -99,7 +99,7 @@ const Home = () => {
 
 
           <div className="flex flex-col justify-center items-center gap-4 md:gap-7 px-6 md:px-0">
-            <span className="font-extrabold  text-2xl md:text-5xl pt-10">ABOUT US</span>
+            <span className="font-extrabold  text-2xl md:text-5xl pt-4">ABOUT US</span>
             <p className="md:w-[80%] px-5 text-sm md:text-md md:tracking-wide text-center">
               Welcome to Real Money – Your #1 Trusted Site for Digital Card Collecting! Dive into the world of digital cards with our comprehensive website
               portal! Connect with fellow enthusiasts in our vibrant social media community, where you can share news, tips, and fun experiences related to
