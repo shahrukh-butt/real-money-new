@@ -101,7 +101,7 @@ export default function DashboardLayout() {
                 </div>
 
                 {/* Main Content */}
-                <div className='w-full lg:basis-[75%] h-full lg:h-[650px] rounded-box relative flex justify-center items-center mt-16 lg:mt-0'>
+                <div className='w-full lg:basis-[75%] h-full lg:h-[650px] rounded-box relative flex justify-center items-center mt-16 lg:mt-0 overflow-hidden '>
                     <Outlet />
                 </div>
             </div>
