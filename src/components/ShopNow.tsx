@@ -5,10 +5,12 @@ export default function ShopNow() {
     return (
         <>
             {/* Shop Now */}
-            <div className="flex justify-center items-center flex-col lg:flex-row md:mt-24 gap-24 px-3 md:px-10 lg:px-36 ">
+            <div className="flex justify-center items-center flex-col lg:flex-row md:mt-24 gap-32 lg:gap-24 px-3 md:px-10 lg:px-28 ">
 
                 <div className="flex-1/2 flex flex-col justify-center items-center md:items-start relative gap-7 px-3 md:px-0">
-                    <span className="Bold-heading flex justify-center items-center w-full md:w-3xl m-0 ">WANT TO SEE THE FULL LIST OF CARDS</span>
+                    <span className="Bold-heading text-start w-full max-w-3xl lg:max-w-4xl m-0 text-base sm:text-lg md:text-xl lg:text-2xl">
+                        WANT TO SEE THE FULL LIST OF CARDS
+                    </span>
                     <span
                         onClick={() => navigate('/shop')}
                         className="btnTheme self-center lg:self-start m-0">Shop Now</span>
@@ -22,12 +24,11 @@ export default function ShopNow() {
                         <div className="rotate-350 md:rotate-345  ">
                             <div
                                 onClick={() => navigate("/product-details")}
-                                className='relative '>
+                                className='relative lg:w-[280px]'>
 
                                 <div className='box relative overflow-hidden'>
 
                                     <img className='p-2 flex shrink-0' src={"/images/CARD 1.png"} alt={"card1"} />
-
 
                                     <div className="flex gap-3.5 absolute top-0 right-2">
                                         <img src="/images/bar1.png" height={400} alt="" />
@@ -69,9 +70,9 @@ export default function ShopNow() {
 
                             <div
                                 onClick={() => navigate("/product-details")}
-                                className='relative '>
+                                className='relative lg:w-[280px]'>
 
-                                <div className='box relative overflow-hidden'>
+                                <div className='box relative overflow-hidden '>
 
                                     <img className='p-2' src={"/images/CARD2.png"} alt={"card1"} />
 
@@ -121,7 +122,7 @@ export default function ShopNow() {
 
 
 
-                    <div className="absolute bottom-[-75px] md:bottom-[-140px] left-auto md:left-20 z-0">
+                    <div className="absolute bottom-[-75px] md:bottom-[-140px] left-auto md:left-12 z-0">
                         <img src="/images/Group.png" className="w-80 md:w-auto" alt="card" />
                     </div>
 

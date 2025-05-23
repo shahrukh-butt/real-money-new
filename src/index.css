@@ -393,13 +393,21 @@ button:focus-visible {
 }
 
 /* Medium screens (tablets) */
-@media (max-width: 1024px) {
+@media (max-width: 1350px) {
   .Bold-heading {
     font-size: 3rem;
     text-align: center;
 
   }
 }
+@media (max-width: 1024px) {
+  .Bold-heading {
+    font-size: 1.5rem;
+    text-align: center;
+
+  }
+}
+
 
 /* Small screens (phones) */
 @media (max-width: 768px) {
