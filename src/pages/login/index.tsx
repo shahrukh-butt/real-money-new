@@ -139,8 +139,8 @@ export default function Login() {
                         </div>
                         <span
                             onClick={() => handleSubmit()}
-                            className="btnTheme text-center text-xl font-extrabold ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "Login"} </span>
-                        <span className=" text-center font-bold ">Don't have an account yet? <span onClick={() => navigate('/signup')} className="text-red-500">Sign Up</span> </span>
+                            className="btnTheme text-center text-xl font-extrabold ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "LOGIN"} </span>
+                        <span className=" text-center font-bold ">Don't have an account yet? <span onClick={() => navigate('/signup')} className="text-red-500">SIGN Up</span> </span>
 
 
 

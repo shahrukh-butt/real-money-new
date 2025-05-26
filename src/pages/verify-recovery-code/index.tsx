@@ -104,7 +104,7 @@ export default function VerifyRecoveryCode() {
                                     <Spinner />
                                 </div>
                             ) : (
-                                "Verify OTP"
+                                "VERIFY OTP"
                             )}
                         </button>
 

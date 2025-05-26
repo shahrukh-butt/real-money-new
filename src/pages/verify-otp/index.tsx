@@ -108,7 +108,7 @@ export default function VerifyOtp() {
                                     <Spinner />
                                 </div>
                             ) : (
-                                "Verify OTP"
+                                "VERIFY OTP"
                             )}
                         </button>
 

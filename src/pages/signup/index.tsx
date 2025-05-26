@@ -168,13 +168,13 @@ export default function Signup() {
                         <div
                             onClick={() => handleSubmit()}
                             className="text-center">
-                            <span className="btnTheme  text-xl font-extrabold mt-4 w-full md:w-72 ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "Sign Up"}</span>
+                            <span className="btnTheme  text-xl font-extrabold mt-4 w-full md:w-72 ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "SIGN UP"}</span>
                         </div>
 
                         <span className="text-center font-bold">
                             Already have an account?{" "}
                             <span onClick={() => navigate("/")} className="text-red-500 cursor-pointer">
-                                Sign In
+                                SIGN IN
                             </span>
                         </span>
                     </div>
