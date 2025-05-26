@@ -1,9 +1,8 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 export default function SideSheet({ setIsOpen, isOpen }: any) {
-
-
-
+    
+    const navigate = useNavigate()
 
 
 
@@ -15,7 +14,7 @@ export default function SideSheet({ setIsOpen, isOpen }: any) {
             <div className="flex items-start justify-between p-4 ">
                 <img
                     className="w-16 h-16 rounded-full mb-10 roundedBox"
-                    src={ "/images/CARD2.png"}
+                    src={"/images/CARD2.png"}
                     alt="profile-image"
                 />
                 <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-600">
@@ -80,6 +79,18 @@ export default function SideSheet({ setIsOpen, isOpen }: any) {
                         </li>
                     ))}
                 </ul>
+
+                <div onClick={() => {
+                    // localStorage.clear();
+                    setIsOpen(false)
+                    navigate("/")
+                }} className="absolute bottom-4 ms-3 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" className="feather feather-log-out text-red-500">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                </div>
             </div>
 
 

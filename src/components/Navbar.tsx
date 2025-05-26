@@ -13,6 +13,11 @@ export default function Navbar() {
             name: 'My Profile',
             link: "my-profile"
         },
+        {
+            id: 2,
+            name: 'Logout',
+            link: ""
+        },
     ];
     const navigate = useNavigate()
     return (
@@ -145,15 +150,21 @@ export default function Navbar() {
                                     </div>
 
                                     {isOpen && (
-                                        <ul className="absolute right-[-30px] top-7 mt-2 w-40 bg-black text-white rounded-md shadow-lg z-10">
+                                        <ul className="absolute right-[-30px] top-8 mt-2 w-40 bg-black box text-white rounded-md shadow-lg z-10">
                                             {options.map((option) => (
                                                 <li
                                                     key={option.id}
                                                     onClick={() => {
-                                                        setIsOpen(false);
-                                                        navigate(`/${option.link}`);
+                                                        if (option.name === "Logout") {
+                                                            setIsOpen(false);
+                                                            navigate(`/${option.link}`);
+                                                            alert("Logout successfully");
+                                                        } else {
+                                                            setIsOpen(false);
+                                                            navigate(`/${option.link}`);
+                                                        }
                                                     }}
-                                                    className="px-4 py-2 hover:bg-gray-800 cursor-pointer"
+                                                    className={`${option.name === "Logout" ? "text-red-500" : ""} px-4 py-2 hover:bg-gray-800 cursor-pointer`}
                                                 >
                                                     {option.name}
                                                 </li>
