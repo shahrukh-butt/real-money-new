@@ -192,7 +192,7 @@ button:focus-visible {
 
 .roundedBox {
   border: 2px solid transparent;
-  border-radius: 50px;
+  border-radius: 25px;
   background-origin: border-box;
   background-clip: padding-box, border-box;
   background-image:

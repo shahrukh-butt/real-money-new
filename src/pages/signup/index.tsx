@@ -39,7 +39,7 @@ export default function Signup() {
                     title: "Thnak You!",
                     text: response?.data?.message || "Welcome aboard!",
                 });
-                navigate('/verify-otp' , {state : {email : formData.email}})
+                navigate('/verify-otp', { state: { email: formData.email } })
 
             } else {
                 Swal.fire({
