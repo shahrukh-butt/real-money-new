@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Card from '../../components/Card'
 
-export default function Shop() {
+export default function  Shop() {
     const [isModalOpen, setIsModalOpen] = useState(true);
     const cardsDate = [
         {
@@ -126,7 +126,7 @@ export default function Shop() {
 
                 </div>
 
-                <div className='flex  items-center justify-center  flex-wrap gap-10'>
+                <div className='flex  items-center justify-center  flex-wrap gap-10 p-2'>
                     {cardsDate.map((card, index) => (
                         <Card
                             key={index}
