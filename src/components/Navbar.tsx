@@ -156,6 +156,8 @@ export default function Navbar() {
                                                     key={option.id}
                                                     onClick={() => {
                                                         if (option.name === "Logout") {
+                                                            localStorage.removeItem("user")
+                                                            localStorage.removeItem("token")
                                                             setIsOpen(false);
                                                             navigate(`/${option.link}`);
                                                         } else {

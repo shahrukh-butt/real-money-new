@@ -1,6 +1,9 @@
 import { Eye, EyeOff } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { useLoginMutation } from "../../redux/services/authSlice";
+import Spinner from "../../components/Spinner";
+import Swal from "sweetalert2";
 
 export default function Login() {
 
@@ -11,7 +14,16 @@ export default function Login() {
 
     });
 
-    const [visibility, setVisibility] = useState(true)
+    const [visibility, setVisibility] = useState(false)
+    const [login, { isLoading }] = useLoginMutation()
+
+
+    useEffect(() => {
+        const user = localStorage.getItem('user')
+        if (user) {
+            navigate('/home')
+        }
+    }, [])
 
     const handleChange = (e: any) => {
         const { name, value } = e.target;
@@ -20,6 +32,45 @@ export default function Login() {
             [name]: value,
         }));
     };
+
+
+
+    const handleSubmit = async () => {
+        try {
+            const response: any = await login(formData)
+            if (response?.data?.status) {
+                Swal.fire({
+                    icon: 'success',
+                    title: "Thnak You!",
+                    text: response?.data?.message || "Welcome aboard!",
+                });
+
+                console.log(response?.data?.data?.user)
+                localStorage.setItem('user', JSON.stringify(response?.data?.data?.user))
+                localStorage.setItem('token', response?.data?.data?.token)
+                navigate('/home')
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.error.data?.message || 'Something went wrong!',
+                    confirmButtonColor: '#d33',
+                });
+            }
+
+        } catch (error: any) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error.error.error || error?.error || error?.message || 'Something went wrong!',
+                confirmButtonColor: '#d33',
+            });
+            console.log(error || error?.error || "something went wrong")
+        }
+
+    };
+
 
 
     return (
@@ -31,7 +82,7 @@ export default function Login() {
 
 
                 <div className="rounded-box-inner modalstyle max-w-xl w-full  ">
-                    
+
                     <div className="p-4 md:p-12 flex flex-col gap-8">
                         <div className="flex flex-col gap-3">
                             <label className="block text-white mb-1 ms-3 md:ms-4 font-bold">
@@ -82,11 +133,13 @@ export default function Login() {
                                 </label>
                             </div>
 
-                            <span className="text-sm font-extralight mt-4 text-[#0ECFED] underline">Forgot Password? </span>
+                            <span 
+                            onClick={() => navigate('/forget-password')}
+                            className="text-sm font-extralight mt-4 text-[#0ECFED] underline">Forgot Password? </span>
                         </div>
-                        <span 
-                        onClick={() => navigate('/home')}
-                        className="btnTheme text-center text-xl font-extrabold ">Login </span>
+                        <span
+                            onClick={() => handleSubmit()}
+                            className="btnTheme text-center text-xl font-extrabold ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "Login"} </span>
                         <span className=" text-center font-bold ">Don't have an account yet? <span onClick={() => navigate('/signup')} className="text-red-500">Sign Up</span> </span>
 
 

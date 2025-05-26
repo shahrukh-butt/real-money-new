@@ -22,6 +22,10 @@ import Auction from "./pages/auction";
 import AuctionDetails from "./pages/auction-details";
 import Signup from "./pages/signup";
 import Login from "./pages/login";
+import VerifyOtp from "./pages/verify-otp";
+import ForgotPassword from "./pages/forget-password";
+import VerifyRecoveryCode from "./pages/verify-recovery-code";
+import RecoverPassword from "./pages/recover-password";
 
 const PrivateRoute = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -45,6 +49,10 @@ function AppRoutes() {
             <Route element={<PrivateRoute />}>
               <Route path="/" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
+              <Route path="/verify-otp" element={<VerifyOtp />} />
+              <Route path="/verify-recovery-code" element={<VerifyRecoveryCode />} />
+              <Route path="/forget-password" element={<ForgotPassword />} />
+              <Route path="/recover-password" element={<RecoverPassword />} />
               <Route path="/home" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="//product-details" element={<ProductDetails />} />

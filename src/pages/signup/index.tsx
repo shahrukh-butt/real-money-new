@@ -1,6 +1,9 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
+import Spinner from "../../components/Spinner";
+import { useRegisterMutation } from "../../redux/services/authSlice";
 
 export default function Signup() {
 
@@ -15,8 +18,9 @@ export default function Signup() {
 
     });
 
-    const [visibility, setVisibility] = useState(true)
-    const [confirmPassVisibility, setConfirmPassVisibility] = useState(true)
+    const [visibility, setVisibility] = useState(false)
+    const [confirmPassVisibility, setConfirmPassVisibility] = useState(false)
+    const [register, { isLoading }] = useRegisterMutation()
 
     const handleChange = (e: any) => {
         const { name, value } = e.target;
@@ -26,6 +30,37 @@ export default function Signup() {
         }));
     };
 
+    const handleSubmit = async () => {
+        try {
+            const response: any = await register(formData)
+            if (response?.data?.status) {
+                Swal.fire({
+                    icon: 'success',
+                    title: "Thnak You!",
+                    text: response?.data?.message || "Welcome aboard!",
+                });
+                navigate('/verify-otp' , {state : {email : formData.email}})
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.error.data?.message || 'Something went wrong!',
+                    confirmButtonColor: '#d33',
+                });
+            }
+
+        } catch (error: any) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: error.error.error || error?.error || error?.message || 'Something went wrong!',
+                confirmButtonColor: '#d33',
+            });
+            console.log(error || error?.error || "something went wrong")
+        }
+
+    };
 
     return (
         <>
@@ -40,7 +75,7 @@ export default function Signup() {
                     <div className="p-4 md:p-12 flex flex-col gap-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                            
+
                             <div className="flex flex-col gap-3">
                                 <label className="block text-white mb-1 ms-3 md:ms-4 font-bold">First Name</label>
                                 <input
@@ -128,11 +163,13 @@ export default function Signup() {
                             </div>
                         </div>
 
-           
 
-                       <div className="text-center">
-                       <span className="btnTheme  text-xl font-extrabold mt-4 w-full md:w-72 ">Continue</span>
-                       </div>
+
+                        <div
+                            onClick={() => handleSubmit()}
+                            className="text-center">
+                            <span className="btnTheme  text-xl font-extrabold mt-4 w-full md:w-72 ">{isLoading ? <div className="flex justify-center items-center gap-2"><span>Loading....</span> <Spinner /></div> : "Sign Up"}</span>
+                        </div>
 
                         <span className="text-center font-bold">
                             Already have an account?{" "}
@@ -142,13 +179,7 @@ export default function Signup() {
                         </span>
                     </div>
 
-
-
                 </div>
-
-
-
-
 
             </div>
 

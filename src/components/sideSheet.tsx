@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router";
 
 export default function SideSheet({ setIsOpen, isOpen }: any) {
-    
+
     const navigate = useNavigate()
 
 
@@ -81,7 +81,8 @@ export default function SideSheet({ setIsOpen, isOpen }: any) {
                 </ul>
 
                 <div onClick={() => {
-                    // localStorage.clear();
+                    localStorage.removeItem("user")
+                    localStorage.removeItem("token")
                     setIsOpen(false)
                     navigate("/")
                 }} className="absolute bottom-4 ms-3 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"

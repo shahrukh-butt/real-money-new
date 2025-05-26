@@ -8,14 +8,15 @@ const servers = {
   dummy: "https://9d2f-204-157-158-10.ngrok-free.app",
 };
 
+
 var URL;
 
 if (VITE_NODE_ENV === "production" && hostname.includes("react.customdev.solutions")) {
   URL = servers.customDev;
-} else if (VITE_NODE_ENV === "production" && hostname.includes("buffaloaudiovisual.com")) {
+} else if (VITE_NODE_ENV === "production" && hostname.includes("realmoneydragon.io")) {
   URL = servers.live;
 } else {
-  URL = servers.local;
+  URL = servers.customDev;
 }
 export const SOCKET_URL = URL;
 export const UPLOADS_URL = `${URL}/`;
