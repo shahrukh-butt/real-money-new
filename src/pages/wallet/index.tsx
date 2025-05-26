@@ -1,10 +1,11 @@
 import { useState } from "react";
 import CaseForWalletOptions from "../../components/CaseForWalletOptions";
 import ShopNow from "../../components/ShopNow";
+import { useGetMyCoinsQuery } from "../../redux/services/coinSlice";
 
 export default function Wallet() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { data } = useGetMyCoinsQuery({},{pollingInterval: 10000}) // interval of 10 seconds
 
 
 
@@ -19,21 +20,15 @@ export default function Wallet() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 mb-12">
           <div className="roundedBox flex items-center justify-center gap-2 ">
             <img src="/images/gold-coin-big.png" className="ms-3" width={30} alt="coin" />
-            <div className="flex justify-center items-center text-sm font-semibold px-2">500 gold coins</div>
+            <div className="flex justify-center items-center text-sm font-semibold px-2">{data?.data?.goldCoins ?? ""} gold coins</div>
           </div>
 
           <div className="roundedBox flex items-center justify-center gap-2 ">
             <img src="/images/red-coin-big.png" className="ms-3" width={30} alt="coin" />
-            <div className="flex justify-center items-center text-sm font-semibold px-2">500 red coins</div>
+            <div className="flex justify-center items-center text-sm font-semibold px-2">{data?.data?.redCoins ?? ""} red coins</div>
           </div>
-
         </div>
-
       </div>
-
-
-
-
 
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
