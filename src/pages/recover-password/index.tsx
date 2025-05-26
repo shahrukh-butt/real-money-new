@@ -120,7 +120,7 @@ export default function RecoverPassword() {
                                     <span>Updating...</span> <Spinner />
                                 </div>
                             ) : (
-                                "Change Password"
+                                "CHANGE PASSWORD"
                             )}
                         </span>
 

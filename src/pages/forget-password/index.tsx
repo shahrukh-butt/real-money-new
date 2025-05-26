@@ -63,7 +63,7 @@ export default function ForgotPassword() {
                                         <Spinner />
                                     </div>
                                 ) : (
-                                    "Send OTP"
+                                    "SEND OTP"
                                 )}
                             </button>
                         </div>
@@ -71,7 +71,7 @@ export default function ForgotPassword() {
                         <span className="text-center font-bold">
                             Remember your password?{" "}
                             <span onClick={() => navigate("/")} className="text-red-500 cursor-pointer">
-                                Sign In
+                                SIGN IN
                             </span>
                         </span>
                     </div>
