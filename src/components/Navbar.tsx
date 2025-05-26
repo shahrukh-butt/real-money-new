@@ -158,7 +158,6 @@ export default function Navbar() {
                                                         if (option.name === "Logout") {
                                                             setIsOpen(false);
                                                             navigate(`/${option.link}`);
-                                                            alert("Logout successfully");
                                                         } else {
                                                             setIsOpen(false);
                                                             navigate(`/${option.link}`);

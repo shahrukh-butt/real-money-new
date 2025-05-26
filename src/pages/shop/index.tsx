@@ -104,10 +104,10 @@ export default function  Shop() {
 
                     <div className='flex flex-col  gap-0 items-center '>
                         <p className='text-white'>Sort By Price</p>
-                        <div className='rounded-box p-4 rounded-full w-[200px]'>
+                        <div className='rounded-box p-4 rounded-full w-[200px] '>
                             <div className="relative w-full">
                                 <select
-                                    className="rounded-full py-2 px-4 w-full text-white bg-black outline-none appearance-none"
+                                    className="rounded-full py-2 px-4 w-full text-white bg-black outline-none appearance-none "
                                 >
                                     <option value="">Select Option</option>
                                     <option value="option1">Option One</option>
