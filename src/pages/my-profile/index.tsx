@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
-import { useGetUserQuery, useUpdateUserProfileMutation } from '../../redux/services/userSlice';
 import Swal from 'sweetalert2';
-import { UPLOADS_URL } from '../../constants/api';
 import Spinner from '../../components/Spinner';
+import { UPLOADS_URL } from '../../constants/api';
+import { useGetUserQuery, useUpdateUserProfileMutation } from '../../redux/services/userSlice';
 
 export default function MyProfile() {
     const inuutRef: any = useRef(null);
